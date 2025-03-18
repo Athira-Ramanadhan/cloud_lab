@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Sharing</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌟 Inspiring Quotes 🌟</h1>
+
+        <!-- Quote Input Form -->
+        <form action="/add" method="post" class="quote-form">
+            <input type="text" name="name" placeholder="Add a new quote..." required>
+            <button type="submit" class="add-btn">Add Quote</button>
+        </form>
+
+        <!-- Quotes List -->
+        <ul class="quote-list">
+            {% for quote_id, quote in quotes.items() %}
+                <li class="quote-card">
+                    <p>"{{ quote }}"</p>
+                    <div class="buttons">
+                        <form action="/delete/{{ quote_id }}" method="post">
+                            <button type="submit" class="delete-btn">Delete</button>
+                        </form>
+                        <form action="/update/{{ quote_id }}" method="post">
+                            <input type="text" name="updated_quote" placeholder="Update quote..." required>
+                            <button type="submit" class="update-btn">Update</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

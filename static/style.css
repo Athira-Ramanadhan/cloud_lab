@@ -1,0 +1,143 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+/* Form */
+.quote-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #333;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Add Button */
+.add-btn {
+    background: #28a745;
+    color: white;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* Update Button */
+.update-btn {
+    background: #007bff;
+    color: white;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+/* Quotes List */
+.quote-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Quote Card */
+.quote-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.quote-card p {
+    margin-bottom: 10px;
+}
+
+/* Button Container */
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    .quote-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
